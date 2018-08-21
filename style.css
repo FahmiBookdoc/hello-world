@@ -1,0 +1,104 @@
+<style>
+
+.container {
+    width: 300px;
+    border: dashed blue 1px;
+}
+
+.img-responsive{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.container img {
+    height: 140px;
+    max-width: 100%;
+}
+
+.center{
+    align-content: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom:0px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.th-dark{
+    background-color: darkgrey;
+    text-align: center;
+}
+
+.th-light{
+    background-color: lightgray;
+}
+
+/* .p-center{
+    text-align: center;
+} */
+
+.table-row > td {
+    text-align: center;
+}
+
+.p-white{
+    color:white;
+}
+
+.p-terms{
+    color:white;
+    font-size: 9px;
+}
+.form-container{
+    background: url('../test/images/bg1.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+form {
+    
+    width: 330px;
+    margin:auto;
+    text-align:left;
+}
+
+.form-group{
+    /* padding-left: 185px; */
+}
+
+.form-header1{
+    color:white;
+}
+
+.form-header2{
+    color:white;
+}
+
+.label{
+    color:white;
+}
+
+.form-input{
+    width:100%;
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: 100%;
+    display: block;
+    margin-bottom:5px;
+}
+
+.form-button{
+    background-color: white;
+}
+
+.terms{
+    /*padding-right:205px;*/
+}
+</style>
