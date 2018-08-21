@@ -53,15 +53,14 @@ h2 {
 
 .p-terms{
     color:white;
-    font-size: 9px;
+    font-size: 8px;
 }
 .form-container{
-    background: url('../test/images/bg1.png');
+    background: url('/Users/fahmi/hello-world/images/bg1.png');
     background-repeat:no-repeat;
     background-position:center;
 }
 form {
-    
     width: 330px;
     margin:auto;
     text-align:left;
@@ -73,6 +72,8 @@ form {
 
 .form-header1{
     color:white;
+    font-size: 19px;
+    padding-top: 35px;
 }
 
 .form-header2{
@@ -91,7 +92,8 @@ form {
     min-width: 0;
     width: 100%;
     display: block;
-    margin-bottom:5px;
+    margin-bottom:1px;
+    padding:1px;
 }
 
 .form-button{
