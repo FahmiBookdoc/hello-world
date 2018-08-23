@@ -30,6 +30,12 @@ h2 {
     font-weight: bold;
 }
 
+#result{
+    font-size: 12px;
+    margin: 0px;
+    color: red;
+}
+
 .th-dark{
     background-color: darkgrey;
     text-align: center;
