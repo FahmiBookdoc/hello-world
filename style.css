@@ -30,11 +30,24 @@ h2 {
     font-weight: bold;
 }
 
-#result{
+/* #result{
     font-size: 12px;
     margin: 0px;
-    color: red;
+    color: white;
 }
+
+#result2{
+    font-size: 12px;
+    margin: 0px;
+    color: white;
+} */
+
+.error-msg{
+    background-color: #FF0000;
+    font-size: 12px;
+    margin: 0px;
+    color: white;
+ }
 
 .th-dark{
     background-color: darkgrey;

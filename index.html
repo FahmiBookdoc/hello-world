@@ -66,7 +66,7 @@
                 <div class="col-sm-12 form-container">
                     <h1 class="form-header1 text-center">JOIN US NOW!</h1>
                     <form name="form1">
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="label" for="company_name">Company Name<sup>*</sup></label>
                             <input type="text" class="form-control-inline" id="company_name" placeholder="Company Name" name="company_name" required>
                         </div>
@@ -81,19 +81,20 @@
                         <div class="form-group">
                             <label class="label" for="name_of_person_in_charge">Name of Person in Charge<sup>*</sup></label>
                             <input type="text" class="form-control-inline" id="name_of_person_in_charge" placeholder="Name of Person in Charge" name="name_of_person_in_charge" required>
-                        </div>
+                        </div> -->
                         <div class="form-group mail">
                             <label class="label" for="email">Email<sup>*</sup></label>
                             <input type="text" class="form-control-inline" id="text1" name="text1" placeholder="Email" required>
-                            <h2 id='result'></h2>
+                            <h2 class="error-msg" id='result'>Please enter a valid email address</h2>
                         </div>
                         <div class="form-group">
                             <label class="label" for="phone_number">Phone Number<sup>*</sup></label>
                             <input type="tel" maxlength="10" class="form-control-inline" id="phone_number" placeholder="Phone Number" name="phone_number" data-format="+601d ddd-dddd" required>
+                            <h2 class="error-msg" id='result2'>Please enter a valid phone number</h2>
                         </div>
                         <div class="form-group">
                             <p class="p-terms">By submitting this, I acknowledge to be the authorized representative of my employer and that I have obtained the permission to register on behalf of my employer. I can confirm that the registration does not breach or conflict with any of my employer's internet policies.</p>
-                            <center><button type="submit" class="btn form-button" onclick="validateEmail(document.form1.text1)">Submit</button></center><br><br>
+                            <center><button type="submit" class="btn form-button" onclick="validateEmail(text1,phone_number)">Submit</button></center><br><br>
                         </div>
                     </form>
                 </div>
@@ -146,20 +147,20 @@
 
 <script>
 
-    function validateEmail(text1){ 
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var $result = $("#result");
+    $('#result, #result2').hide();
 
-    if(text1.value.match(mailformat))
-        {
-            return true;
-        }
-            else
-        {
-            $result.text("You have entered an invalid email");
+    function validateEmail(text1, phone_number){
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+        if(!text1.value.match(mailformat)){
             event.preventDefault();
-            return false;
+            $('#result').show();
+        }
+
+        if(!phone_number.value.match(phoneno)){
+            event.preventDefault();
+            $('#result2').show();
         }
     }
-
 </script>
