@@ -6,17 +6,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
     <!-- Content start -->
+        
+    <!-- Nav bar start -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.google.com"><img style="width: 25px;" src="Images/wclogo.png" alt="Brand Image"></a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
+              <li><a href="#form">Form</a></li>
+              <li><a href="#table">Table</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">About You</a></li>
+                  <li><a href="#">About Me</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      
+    <!-- Nav bar end -->
 
     <!--First part start-->
 
-        <div class="container">
+        <div id="about" class="container">
             <h1>About BookDoc</h1>
 
             <h2>Customers </h2>
@@ -32,7 +76,7 @@
             <p>Hospitals can use BookDoc's highly scalable platform to gather analytics, track human
                 capital, attract new patients, and simplify appointment scheduling. </p>
         </div>
-
+        
         <!--3 Images start-->
 
         <div class="container">
@@ -61,14 +105,14 @@
 
         <!--Form start-->
 
-        <div class="container">
+        <div id="form" class="container">
             <div class="row">
                 <div class="col-sm-12 form-container">
                     <h1 class="form-header1 text-center">JOIN US NOW!</h1>
                     <form name="form1">
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label class="label" for="company_name">Company Name<sup>*</sup></label>
-                            <input type="text" class="form-control-inline" id="company_name" placeholder="Company Name" name="company_name" required>
+                            <input type="text" class="form-control-inline" id="company_name" placeholder="Company Name" name="company_name" required autofocus>
                         </div>
                         <div class="form-group">
                             <label class="label" for="company_address">Company Address<sup>*</sup></label>
@@ -81,7 +125,7 @@
                         <div class="form-group">
                             <label class="label" for="name_of_person_in_charge">Name of Person in Charge<sup>*</sup></label>
                             <input type="text" class="form-control-inline" id="name_of_person_in_charge" placeholder="Name of Person in Charge" name="name_of_person_in_charge" required>
-                        </div> -->
+                        </div>
                         <div class="form-group mail">
                             <label class="label" for="email">Email<sup>*</sup></label>
                             <input type="text" class="form-control-inline" id="text1" name="text1" placeholder="Email" required>
@@ -105,7 +149,7 @@
 
         <!-- Table start -->
 
-        <div class="container">
+        <div id="table" class="container">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -161,6 +205,15 @@
         if(!phone_number.value.match(phoneno)){
             event.preventDefault();
             $('#result2').show();
+        }
+    }
+
+    function navbarResponsive() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
         }
     }
 </script>
