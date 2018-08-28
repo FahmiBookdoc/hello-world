@@ -1,0 +1,214 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>JoHN Doe</title>
+  <meta name="description" content="JoHN Doe">
+  <meta name="author" content="GGWP">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Jquery CDN -->
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <!-- Font awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="navbarstyle.css">
+
+</head>
+
+<body>
+    
+  <nav class="topnav navbar-fixed-top" id="myTopnav">
+    <a href="#home" class="animation active">BookDoc</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a id="icon" href="javascript:void(0);" class="animation icon" onclick="myFunction()">
+      <i class="fa fa-free-code-camp fa-lg" aria-hidden="true"></i>
+    </a>
+  </nav>
+        
+  <!--First part start-->
+
+  <div id="about" class="container">
+      <h1>About BookDoc</h1>
+
+      <h2>Customers </h2>
+      <p>A complete, integrated, hassle-free way to seek health services locally, outstation, and
+          abroad through BookDoc and our regional strategic partners for accommodations, land
+          and air transport: TripAdvisor, Agoda, Airbnb, Uber, Grab, and AirAsia. </p>
+
+      <h2>Healthcare Professionals </h2>
+      <p>Healthcare providers in five countries and 20 cities can use <a href="https://www.bookdoc.com/" target="_blank">BookDoc</a>'s platform to list
+          their practice online, help manage appointments, and simplify patient care.</p>
+
+      <h2>Hospitals </h2>
+      <p>Hospitals can use BookDoc's highly scalable platform to gather analytics, track human
+          capital, attract new patients, and simplify appointment scheduling. </p>
+  </div>
+  
+  <!--3 Images start-->
+
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-4">
+              <img src="images/image1.jpg" alt="image1" class="img-responsive">
+          </div>
+          <div class="col-xs-4">
+              <img src="images/image2.jpg" alt="image2" class="img-responsive">
+          </div>
+          <div class="col-xs-4">
+              <img src="images/image3.jpg" alt="image3" class="img-responsive">
+          </div>
+      </div>
+  </div>
+
+   <!--3 Images end-->
+      
+  <div class="container">
+      <h2>Corporate </h2>
+      <p>BookDoc's Corporate platform provides companies with data analytics that reduce
+      employee’s healthcare cost, increase productivity, and employee engagement. </p>
+  </div>
+
+  <!--First part end-->
+
+  <!--Form start-->
+
+  <div id="form" class="container">
+      <div class="row">
+          <div class="col-sm-12 form-container">
+              <h1 class="form-header1 text-center">JOIN US NOW!</h1>
+              <form name="form1">
+                  <div class="form-group">
+                      <label class="label" for="company_name">Company Name<sup>*</sup></label>
+                      <input type="text" class="form-control-inline" id="company_name" placeholder="Company Name" name="company_name" required autofocus>
+                  </div>
+                  <div class="form-group">
+                      <label class="label" for="company_address">Company Address<sup>*</sup></label>
+                      <input type="text" class="form-control-inline" id="company_address" placeholder="Company Address" name="company_address" required>
+                  </div>
+                  <div class="form-group">
+                      <label class="label" for="perkeso_employer_code">Perkeso Employer Code<sup>*</sup></label>
+                      <input type="text" class="form-control-inline" id="perkeso_employer_code" placeholder="Perkeso Employer Code" name="perkeso_employer_code" required>
+                  </div>
+                  <div class="form-group">
+                      <label class="label" for="name_of_person_in_charge">Name of Person in Charge<sup>*</sup></label>
+                      <input type="text" class="form-control-inline" id="name_of_person_in_charge" placeholder="Name of Person in Charge" name="name_of_person_in_charge" required>
+                  </div>
+                  <div class="form-group mail">
+                      <label class="label" for="email">Email<sup>*</sup></label>
+                      <input type="text" class="form-control-inline" id="text1" name="text1" placeholder="Email" required>
+                      <h2 class="error-msg" id='result'>Please enter a valid email address</h2>
+                  </div>
+                  <div class="form-group">
+                      <label class="label" for="phone_number">Phone Number<sup>*</sup></label>
+                      <input type="tel" maxlength="10" class="form-control-inline" id="phone_number" placeholder="Phone Number" name="phone_number" data-format="+601d ddd-dddd" required>
+                      <h2 class="error-msg" id='result2'>Please enter a valid phone number</h2>
+                  </div>
+                  <div class="form-group">
+                      <p class="p-terms">By submitting this, I acknowledge to be the authorized representative of my employer and that I have obtained the permission to register on behalf of my employer. I can confirm that the registration does not breach or conflict with any of my employer's internet policies.</p>
+                      <center><button type="submit" class="btn form-button" onclick="validateEmail(text1,phone_number)">Submit</button></center><br><br>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <!--Form end-->
+
+  <!-- Table start -->
+
+  <div id="table" class="container">
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>&nbsp;</th>
+                  <th class="th-dark" colspan="2">Mathematics</th>
+                  <th class="th-dark" colspan="2">Science</th>
+                  <th class="th-dark" colspan="2">Literature</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="table-row">
+                  <td class="th-light">Courses</td>
+                  <td>Algebra</td>
+                  <td>Geometry</td>
+                  <td>Physics</td>
+                  <td>Chemistry</td>
+                  <td>Poem</td>
+                  <td>Grammar</td>
+              </tr>
+              <tr class="table-row">
+                  <td class="th-light">Grades</td>
+                  <td>30</td>
+                  <td>30</td>
+                  <td>20</td>
+                  <td>30</td>
+                  <td>22</td>
+                  <td>24</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+<!-- Table end -->
+
+</body>
+</html>
+
+<script>
+
+$(".animation").mouseenter(function(){
+  $(this).animate({
+    fontSize:'22px'});
+});
+
+$(".animation").mouseleave(function(){
+  $(this).animate({fontSize:'17px'});
+});
+
+$('#result, #result2').hide();
+
+function validateEmail(text1, phone_number){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+    if(!text1.value.match(mailformat)){
+        event.preventDefault();
+        $('#result').show();
+    }
+
+    if(!phone_number.value.match(phoneno)){
+        event.preventDefault();
+        $('#result2').show();
+    }
+}
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>

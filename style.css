@@ -3,6 +3,12 @@
 .container {
     width: 300px;
     border: dashed blue 1px;
+    background-color: lightpink;
+}
+
+#about{
+    background-color: lightpink;
+    margin-top:70px;
 }
 
 .img-responsive{
@@ -30,18 +36,6 @@ h2 {
     font-weight: bold;
 }
 
-/* #result{
-    font-size: 12px;
-    margin: 0px;
-    color: white;
-}
-
-#result2{
-    font-size: 12px;
-    margin: 0px;
-    color: white;
-} */
-
 .error-msg{
     background-color: #FF0000;
     font-size: 12px;
@@ -58,10 +52,6 @@ h2 {
     background-color: lightgray;
 }
 
-/* .p-center{
-    text-align: center;
-} */
-
 .table-row > td {
     text-align: center;
 }
@@ -74,6 +64,7 @@ h2 {
     color:white;
     font-size: 8px;
 }
+
 .form-container{
     background: url('/Users/fahmi/hello-world/images/bg1.png');
     background-repeat:no-repeat;
@@ -83,10 +74,6 @@ form {
     width: 330px;
     margin:auto;
     text-align:left;
-}
-
-.form-group{
-    /* padding-left: 185px; */
 }
 
 .form-header1{
@@ -119,7 +106,12 @@ form {
     background-color: white;
 }
 
-.terms{
-    /*padding-right:205px;*/
+.page-footer{
+    background-color: lightgray;
+    padding: 30px;
+}
+
+.freecode{
+    padding-bottom: 20px;
 }
 </style>

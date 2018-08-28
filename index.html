@@ -184,6 +184,42 @@
 
     <!-- Table end -->
 
+    <!-- Free code start -->
+
+    <div class="container freecode">
+        <h2 id="headchaintest">Corporate </h2>
+        <p id="chaintest">BookDoc's Corporate platform provides companies with data analytics that reduce
+        employee’s healthcare cost, increase productivity, and employee engagement. </p>
+        <button class="button btn-danger" id="hidebutton">Click here to hide all p</button>
+        <button class="button btn-success" id="showbutton">Click here to show all p</button>
+    </div>
+    
+    <!-- Free code end -->
+
+    <!-- Free code start -->
+
+    <div class="container freecode">
+        <h2 id="headchaintest">Corporate </h2>
+        <p id="chaintest2">BookDoc's Corporate platform provides companies with data analytics that reduce
+        employee’s healthcare cost, increase productivity, and employee engagement. </p>
+        <button class="button btn-primary" id="testbutton2">Click here to change text</button>
+    </div>
+    
+    <!-- Free code end -->
+
+    <!-- Footer -->
+
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="https://google.com"> BookDoc.com</a>
+        </div>
+        <!-- Copyright -->
+      
+    </footer>
+      <!-- Footer -->
+
     <!-- Content end -->
 
     </body>
@@ -192,6 +228,30 @@
 <script>
 
     $('#result, #result2').hide();
+
+    $("#chaintest").click(function(){
+        $(this).css("color","red");
+    });
+
+    $("#headchaintest").mouseenter(function(){
+        $(this).css("color","red");
+    });
+
+    $("#headchaintest").mouseleave(function(){
+        $(this).css("color","black");
+    });
+
+    $("#hidebutton").click(function(){
+        $("p").hide("slow");
+    });
+
+    $("#showbutton").click(function(){
+        $("p").show();
+    });
+
+    $("#testbutton2").click(function(){
+        $("#chaintest2").text("Hello world!");
+    });
 
     function validateEmail(text1, phone_number){
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -216,4 +276,5 @@
             x.className = "topnav";
         }
     }
+
 </script>
