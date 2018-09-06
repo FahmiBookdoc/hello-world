@@ -1,0 +1,61 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+#navbar{
+  background-color:rgb(245, 243, 243);
+}
+
+.fa.fa-navicon{
+  color:green;
+}
+
+.nav-item > a{
+  color: lightskyblue;
+}
+#dropdown-menu{
+  padding-right: .5em;
+  padding-left: .5em;
+  margin-top: .5em;
+}
+
+#dropdown-menu > ul{
+  padding-right: .5em;
+  padding-left: .5em;
+  margin-top: .5em;
+}
+
+#dropdown-menu >ul > li > a{
+  color:grey;
+}
+
+.card-header{
+  background-color:lightcyan;
+  color:grey;
+  font-weight: 200;
+  font-size:12px;
+}
+
+#table1{
+  border:1px solid lightskyblue;
+}
+
+#table2, #table2 th, #table2 td{
+  border:none;
+  padding:4px;
+}
+
+.row-equal-height {
+  display: flex;
+}
+
+#dropdown-menu:active {
+  background-color: lightskyblue;
+  color:white;
+}

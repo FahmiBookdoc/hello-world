@@ -1,3 +1,120 @@
+<style>
+
+.container {
+    width: 300px;
+    border: dashed blue 1px;
+    background-color: lightpink;
+}
+
+#about{
+    background-color: lightpink;
+    margin-top:70px;
+    margin-bottom:20px;
+}
+
+.img-responsive{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.container img {
+    height: 140px;
+    max-width: 100%;
+}
+
+.center{
+    align-content: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom:0px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.error-msg{
+    background-color: #FF0000;
+    font-size: 12px;
+    margin: 0px;
+    color: white;
+ }
+
+.th-dark{
+    background-color: darkgrey;
+    text-align: center;
+}
+
+.th-light{
+    background-color: lightgray;
+}
+
+.table-row > td {
+    text-align: center;
+}
+
+.p-white{
+    color:white;
+}
+
+.p-terms{
+    color:white;
+    font-size: 8px;
+}
+
+.form-container{
+    background: url('/Users/fahmi/hello-world/images/bg1.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+form {
+    width: 330px;
+    margin:auto;
+    text-align:left;
+}
+
+.form-header1{
+    color:white;
+    font-size: 19px;
+    padding-top: 35px;
+}
+
+.form-header2{
+    color:white;
+}
+
+.label{
+    color:white;
+}
+
+.form-input{
+    width:100%;
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: 100%;
+    display: block;
+    margin-bottom:1px;
+    padding:1px;
+}
+
+.form-button{
+    background-color: white;
+}
+
+.page-footer{
+    background-color: lightgray;
+    padding: 30px;
+}
+
+.freecode{
+    padding-bottom: 20px;
+}
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #ed2528;
@@ -56,105 +173,5 @@
     }
 }
 
-<style>
-
-.container {
-    width: 300px;
-    border: dashed blue 1px;
-}
-
-.img-responsive{
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.container img {
-    height: 140px;
-    max-width: 100%;
-}
-
-.center{
-    align-content: center;
-}
-
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    font-size: 18px;
-    margin-bottom:0px;
-    font-style: italic;
-    font-weight: bold;
-}
-
-.error-msg{
-    background-color: #FF0000;
-    font-size: 12px;
-    margin: 0px;
-    color: white;
- }
-
-.th-dark{
-    background-color: darkgrey;
-    text-align: center;
-}
-
-.th-light{
-    background-color: lightgray;
-}
-
-.table-row > td {
-    text-align: center;
-}
-
-.p-white{
-    color:white;
-}
-
-.p-terms{
-    color:white;
-    font-size: 8px;
-}
-.form-container{
-    background: url('/Users/fahmi/hello-world/images/bg1.png');
-    background-repeat:no-repeat;
-    background-position:center;
-}
-form {
-    width: 330px;
-    margin:auto;
-    text-align:left;
-}
-
-.form-header1{
-    color:white;
-    font-size: 19px;
-    padding-top: 35px;
-}
-
-.form-header2{
-    color:white;
-}
-
-.label{
-    color:white;
-}
-
-.form-input{
-    width:100%;
-}
-
-.form-control-inline {
-    min-width: 0;
-    width: 100%;
-    display: block;
-    margin-bottom:1px;
-    padding:1px;
-}
-
-.form-button{
-    background-color: white;
-}
 
 </style>

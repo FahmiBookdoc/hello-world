@@ -6,9 +6,14 @@
     background-color: lightpink;
 }
 
+#button-center {
+    margin-left: 110px;
+}
+
 #about{
     background-color: lightpink;
     margin-top:70px;
+    margin-bottom:20px;
 }
 
 .img-responsive{

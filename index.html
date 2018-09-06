@@ -1,186 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
+
     <title>BookdocTV</title>
-    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAACxSagAAAAAALJJqAC1UK0AkDqBAPn5+QCiQZYAizZ8AK5IowCMNnwAsn6oALRLqwCVRIYAkkuDAJ1SkAC5YLIAtlmtAJM8hACDMXIAmj+MAKxGoQC2Ta4AsE2mALFNpgCWTYYAtVCuAIczdQCtS6QAkj2CAI05fQCqSp8AiTh4AKxGogCmRpoAvWK2AK1JogC3UK8AqEWdAIYzdgCHM3YAkjqDAI82fgC1S60AgjJxALVdrACkVpcAjTl+ALxgtACmQ5sAjjx+AIQ0dACcP44A/v7+AJ1QkACIM3cAqEieAI06fACzT6sAkj2EALRPqwCobJwArkumAIMycgCjXZUAizV6AKFDlACzSqkAkTiCALZRrgCVP4cAmDuKALNNqQCGN3UAhzd1AKpFnwCqV54AkzqFAJQ6hQCwSKcAsFqmALRPrAC1T6wAgzJzAJs9jQCUPYUAhDJzAKFDlQCQPIAAt1GvAKhGnQC5X7EAo1SXAK9JpQCYPosAhzd2AI83fgCIN3YAtkytAIk2eQCLOXkAsU6oALdRsAC4UbAAqUaeAJM7hACwSaYAiDd3AJo+jAC2TK4AlEyGAJlBjACJNnoAvWG1AIYydQCLOXoA////ALJOqQC1SqwAuFGxAI04fQCfP5IAo0aXAI07fQD9/f0AokGVAJ1AkACjZJYAs06qAJhOigD7+/sAnEOQAKRDmACDMXEAm0qNAI07fgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBbYA1W0tPLFpwIi8PAQEBK1JxQENGeDAgAipsYUIBATI+hBopTVN8JRQAdRVhAQFvJhKCczR7e3MfCE4LFQEBBAcngnM/DIWCNB9KaQsBAV0oCYJzGFU2X3MfBmdcAQFBM0yCcwp+PII0a2t8WQEBN4N9gnOBBQVzH3doE1YBAT0jIYJzDh1ignMxLlRuAQF/RxuCcy0Reg1zHx+GOgEBGSQ5gnNzNDRzHx9JHzgBAVB2ZRAQEBAQEBxjXklqAQFkJHZmURceeYJFV3JgSAEBAXQDWEQ7Fh55gkVXcgEBAQEBAQEBAQEBAQEBAQEBAf//AADAAwAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAP//AAA=" rel="icon" type="image/x-icon" />
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAACxSagAAAAAALJJqAC1UK0AkDqBAPn5+QCiQZYAizZ8AK5IowCMNnwAsn6oALRLqwCVRIYAkkuDAJ1SkAC5YLIAtlmtAJM8hACDMXIAmj+MAKxGoQC2Ta4AsE2mALFNpgCWTYYAtVCuAIczdQCtS6QAkj2CAI05fQCqSp8AiTh4AKxGogCmRpoAvWK2AK1JogC3UK8AqEWdAIYzdgCHM3YAkjqDAI82fgC1S60AgjJxALVdrACkVpcAjTl+ALxgtACmQ5sAjjx+AIQ0dACcP44A/v7+AJ1QkACIM3cAqEieAI06fACzT6sAkj2EALRPqwCobJwArkumAIMycgCjXZUAizV6AKFDlACzSqkAkTiCALZRrgCVP4cAmDuKALNNqQCGN3UAhzd1AKpFnwCqV54AkzqFAJQ6hQCwSKcAsFqmALRPrAC1T6wAgzJzAJs9jQCUPYUAhDJzAKFDlQCQPIAAt1GvAKhGnQC5X7EAo1SXAK9JpQCYPosAhzd2AI83fgCIN3YAtkytAIk2eQCLOXkAsU6oALdRsAC4UbAAqUaeAJM7hACwSaYAiDd3AJo+jAC2TK4AlEyGAJlBjACJNnoAvWG1AIYydQCLOXoA////ALJOqQC1SqwAuFGxAI04fQCfP5IAo0aXAI07fQD9/f0AokGVAJ1AkACjZJYAs06qAJhOigD7+/sAnEOQAKRDmACDMXEAm0qNAI07fgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBbYA1W0tPLFpwIi8PAQEBK1JxQENGeDAgAipsYUIBATI+hBopTVN8JRQAdRVhAQFvJhKCczR7e3MfCE4LFQEBBAcngnM/DIWCNB9KaQsBAV0oCYJzGFU2X3MfBmdcAQFBM0yCcwp+PII0a2t8WQEBN4N9gnOBBQVzH3doE1YBAT0jIYJzDh1ignMxLlRuAQF/RxuCcy0Reg1zHx+GOgEBGSQ5gnNzNDRzHx9JHzgBAVB2ZRAQEBAQEBxjXklqAQFkJHZmURceeYJFV3JgSAEBAXQDWEQ7Fh55gkVXcgEBAQEBAQEBAQEBAQEBAQEBAf//AADAAwAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAP//AAA="
+        rel="icon" type="image/x-icon" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+
+</head>
+
+<body>
 
     <!-- Content start -->
-        
+
     <!-- Nav bar start -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://www.google.com"><img style="width: 25px;" src="Images/wclogo.png" alt="Brand Image"></a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
-              <li><a href="#form">Form</a></li>
-              <li><a href="#table">Table</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">About You</a></li>
-                  <li><a href="#">About Me</a></li>
-                  <li><a href="#">Settings</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Logout</a></li>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.google.com">
+                    <img style="width: 25px;" src="Images/wclogo.png" alt="Brand Image">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#about">About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#form">Form</a>
+                    </li>
+                    <li>
+                        <a href="#table">Table</a>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-      
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">About You</a>
+                            </li>
+                            <li>
+                                <a href="#">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
     <!-- Nav bar end -->
 
     <!--First part start-->
 
-        <div id="about" class="container">
-            <h1>About BookDoc</h1>
+    <div id="about" class="container">
+        <h1>About BookDoc</h1>
 
-            <h2>Customers </h2>
-            <p>A complete, integrated, hassle-free way to seek health services locally, outstation, and
-                abroad through BookDoc and our regional strategic partners for accommodations, land
-                and air transport: TripAdvisor, Agoda, Airbnb, Uber, Grab, and AirAsia. </p>
+        <h2>Customers </h2>
+        <p>A complete, integrated, hassle-free way to seek health services locally, outstation, and abroad through BookDoc and
+            our regional strategic partners for accommodations, land and air transport: TripAdvisor, Agoda, Airbnb, Uber,
+            Grab, and AirAsia. </p>
 
-            <h2>Healthcare Professionals </h2>
-            <p>Healthcare providers in five countries and 20 cities can use <a href="https://www.bookdoc.com/" target="_blank">BookDoc</a>'s platform to list
-                their practice online, help manage appointments, and simplify patient care.</p>
+        <h2>Healthcare Professionals </h2>
+        <p>Healthcare providers in five countries and 20 cities can use
+            <a href="https://www.bookdoc.com/" target="_blank">BookDoc</a>'s platform to list their practice online, help manage appointments, and simplify patient care.</p>
 
-            <h2>Hospitals </h2>
-            <p>Hospitals can use BookDoc's highly scalable platform to gather analytics, track human
-                capital, attract new patients, and simplify appointment scheduling. </p>
-        </div>
-        
-        <!--3 Images start-->
+        <h2>Hospitals </h2>
+        <p>Hospitals can use BookDoc's highly scalable platform to gather analytics, track human capital, attract new patients,
+            and simplify appointment scheduling. </p>
+    </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <img src="images/image1.jpg" alt="image1" class="img-responsive">
-                </div>
-                <div class="col-xs-4">
-                    <img src="images/image2.jpg" alt="image2" class="img-responsive">
-                </div>
-                <div class="col-xs-4">
-                    <img src="images/image3.jpg" alt="image3" class="img-responsive">
-                </div>
+    <!--3 Images start-->
+
+    <div class="container" style="border:1px black solid">
+        <div class="row">
+            <div class="col-xs-4">
+                <img src="images/image1.jpg" alt="image1" class="img-responsive">
+            </div>
+            <div class="col-xs-4">
+                <img src="images/image2.jpg" alt="image2" class="img-responsive">
+            </div>
+            <div class="col-xs-4">
+                <img src="images/image3.jpg" alt="image3" class="img-responsive">
             </div>
         </div>
+    </div>
 
-         <!--3 Images end-->
-            
-        <div class="container">
-            <h2>Corporate </h2>
-            <p>BookDoc's Corporate platform provides companies with data analytics that reduce
-            employee’s healthcare cost, increase productivity, and employee engagement. </p>
-        </div>
+    <!--3 Images end-->
 
-        <!--First part end-->
+    <div class="container">
+        <h2>Corporate </h2>
+        <p>BookDoc's Corporate platform provides companies with data analytics that reduce employee’s healthcare cost, increase
+            productivity, and employee engagement. </p>
+    </div>
 
-        <!--Form start-->
+    <!--First part end-->
 
-        <div id="form" class="container">
-            <div class="row">
-                <div class="col-sm-12 form-container">
-                    <h1 class="form-header1 text-center">JOIN US NOW!</h1>
-                    <form name="form1">
-                        <div class="form-group">
-                            <label class="label" for="company_name">Company Name<sup>*</sup></label>
-                            <input type="text" class="form-control-inline" id="company_name" placeholder="Company Name" name="company_name" required autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="company_address">Company Address<sup>*</sup></label>
-                            <input type="text" class="form-control-inline" id="company_address" placeholder="Company Address" name="company_address" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="perkeso_employer_code">Perkeso Employer Code<sup>*</sup></label>
-                            <input type="text" class="form-control-inline" id="perkeso_employer_code" placeholder="Perkeso Employer Code" name="perkeso_employer_code" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="name_of_person_in_charge">Name of Person in Charge<sup>*</sup></label>
-                            <input type="text" class="form-control-inline" id="name_of_person_in_charge" placeholder="Name of Person in Charge" name="name_of_person_in_charge" required>
-                        </div>
-                        <div class="form-group mail">
-                            <label class="label" for="email">Email<sup>*</sup></label>
-                            <input type="text" class="form-control-inline" id="text1" name="text1" placeholder="Email" required>
-                            <h2 class="error-msg" id='result'>Please enter a valid email address</h2>
-                        </div>
-                        <div class="form-group">
-                            <label class="label" for="phone_number">Phone Number<sup>*</sup></label>
-                            <input type="tel" maxlength="10" class="form-control-inline" id="phone_number" placeholder="Phone Number" name="phone_number" data-format="+601d ddd-dddd" required>
-                            <h2 class="error-msg" id='result2'>Please enter a valid phone number</h2>
-                        </div>
-                        <div class="form-group">
-                            <p class="p-terms">By submitting this, I acknowledge to be the authorized representative of my employer and that I have obtained the permission to register on behalf of my employer. I can confirm that the registration does not breach or conflict with any of my employer's internet policies.</p>
-                            <center><button type="submit" class="btn form-button" onclick="validateEmail(text1,phone_number)">Submit</button></center><br><br>
-                        </div>
-                    </form>
-                </div>
+    <!--Form start-->
+
+    <div id="form" class="container">
+        <div class="row">
+            <div class="col-sm-12 form-container">
+                <h1 class="form-header1 text-center">JOIN US NOW!</h1>
+                <form name="form1">
+                    <div class="form-group">
+                        <label class="label" for="company_name">Company Name
+                            <sup>*</sup>
+                        </label>
+                        <input type="text" class="form-control-inline" id="company_name" placeholder="Company Name" name="company_name" required
+                            autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="company_address">Company Address
+                            <sup>*</sup>
+                        </label>
+                        <input type="text" class="form-control-inline" id="company_address" placeholder="Company Address" name="company_address"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="perkeso_employer_code">Perkeso Employer Code
+                            <sup>*</sup>
+                        </label>
+                        <input type="text" class="form-control-inline" id="perkeso_employer_code" placeholder="Perkeso Employer Code" name="perkeso_employer_code"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="name_of_person_in_charge">Name of Person in Charge
+                            <sup>*</sup>
+                        </label>
+                        <input type="text" class="form-control-inline" id="name_of_person_in_charge" placeholder="Name of Person in Charge" name="name_of_person_in_charge"
+                            required>
+                    </div>
+                    <div class="form-group mail">
+                        <label class="label" for="email">Email
+                            <sup>*</sup>
+                        </label>
+                        <input type="text" class="form-control-inline" id="text1" name="text1" placeholder="Email" required>
+                        <h2 class="error-msg" id='result'>Please enter a valid email address</h2>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="phone_number">Phone Number
+                            <sup>*</sup>
+                        </label>
+                        <input type="tel" maxlength="10" class="form-control-inline" id="phone_number" placeholder="Phone Number" name="phone_number"
+                            data-format="+601d ddd-dddd" required>
+                        <h2 class="error-msg" id='result2'>Please enter a valid phone number</h2>
+                    </div>
+                    <div class="form-group">
+                        <p class="p-terms">By submitting this, I acknowledge to be the authorized representative of my employer and that I have
+                            obtained the permission to register on behalf of my employer. I can confirm that the registration
+                            does not breach or conflict with any of my employer's internet policies.</p>
+                            <button id="button-center" type="submit" class="btn form-button" onclick="validateEmail(text1,phone_number)">Submit</button>
+                        <br>
+                        <br>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
-        <!--Form end-->
+    <!--Form end-->
 
-        <!-- Table start -->
+    <!-- Table start -->
 
-        <div id="table" class="container">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>&nbsp;</th>
-                        <th class="th-dark" colspan="2">Mathematics</th>
-                        <th class="th-dark" colspan="2">Science</th>
-                        <th class="th-dark" colspan="2">Literature</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-row">
-                        <td class="th-light">Courses</td>
-                        <td>Algebra</td>
-                        <td>Geometry</td>
-                        <td>Physics</td>
-                        <td>Chemistry</td>
-                        <td>Poem</td>
-                        <td>Grammar</td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="th-light">Grades</td>
-                        <td>30</td>
-                        <td>30</td>
-                        <td>20</td>
-                        <td>30</td>
-                        <td>22</td>
-                        <td>24</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div id="table" class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th class="th-dark" colspan="2">Mathematics</th>
+                    <th class="th-dark" colspan="2">Science</th>
+                    <th class="th-dark" colspan="2">Literature</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row">
+                    <td class="th-light">Courses</td>
+                    <td>Algebra</td>
+                    <td>Geometry</td>
+                    <td>Physics</td>
+                    <td>Chemistry</td>
+                    <td>Poem</td>
+                    <td>Grammar</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="th-light">Grades</td>
+                    <td>30</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>22</td>
+                    <td>24</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!-- Table end -->
 
@@ -188,23 +237,23 @@
 
     <div class="container freecode">
         <h2 id="headchaintest">Corporate </h2>
-        <p id="chaintest">BookDoc's Corporate platform provides companies with data analytics that reduce
-        employee’s healthcare cost, increase productivity, and employee engagement. </p>
+        <p id="chaintest">BookDoc's Corporate platform provides companies with data analytics that reduce employee’s healthcare cost, increase
+            productivity, and employee engagement. </p>
         <button class="button btn-danger" id="hidebutton">Click here to hide all p</button>
         <button class="button btn-success" id="showbutton">Click here to show all p</button>
     </div>
-    
+
     <!-- Free code end -->
 
     <!-- Free code start -->
 
     <div class="container freecode">
         <h2 id="headchaintest">Corporate </h2>
-        <p id="chaintest2">BookDoc's Corporate platform provides companies with data analytics that reduce
-        employee’s healthcare cost, increase productivity, and employee engagement. </p>
+        <p id="chaintest2">BookDoc's Corporate platform provides companies with data analytics that reduce employee’s healthcare cost, increase
+            productivity, and employee engagement. </p>
         <button class="button btn-primary" id="testbutton2">Click here to change text</button>
     </div>
-    
+
     <!-- Free code end -->
 
     <!-- Footer -->
@@ -212,57 +261,61 @@
     <footer class="page-footer font-small blue">
 
         <!-- Copyright -->
+
         <div class="footer-copyright text-center py-3">© 2018 Copyright:
-          <a href="https://google.com"> BookDoc.com</a>
+            <a href="https://google.com"> BookDoc.com</a>
         </div>
+
         <!-- Copyright -->
-      
+
     </footer>
-      <!-- Footer -->
+
+    <!-- Footer -->
 
     <!-- Content end -->
 
-    </body>
+</body>
+
 </html>
 
 <script>
 
     $('#result, #result2').hide();
 
-    $("#chaintest").click(function(){
-        $(this).css("color","red");
+    $("#chaintest").click(function () {
+        $(this).css("color", "red");
     });
 
-    $("#headchaintest").mouseenter(function(){
-        $(this).css("color","red");
+    $("#headchaintest").mouseenter(function () {
+        $(this).css("color", "red");
     });
 
-    $("#headchaintest").mouseleave(function(){
-        $(this).css("color","black");
+    $("#headchaintest").mouseleave(function () {
+        $(this).css("color", "black");
     });
 
-    $("#hidebutton").click(function(){
+    $("#hidebutton").click(function () {
         $("p").hide("slow");
     });
 
-    $("#showbutton").click(function(){
+    $("#showbutton").click(function () {
         $("p").show();
     });
 
-    $("#testbutton2").click(function(){
-        $("#chaintest2").text("Hello world!");
+    $("#testbutton2").click(function () {
+        $("#chaintest2").text("TEST");
     });
 
-    function validateEmail(text1, phone_number){
+    function validateEmail(text1, phone_number) {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-        if(!text1.value.match(mailformat)){
+        if (!text1.value.match(mailformat)) {
             event.preventDefault();
             $('#result').show();
         }
 
-        if(!phone_number.value.match(phoneno)){
+        if (!phone_number.value.match(phoneno)) {
             event.preventDefault();
             $('#result2').show();
         }
